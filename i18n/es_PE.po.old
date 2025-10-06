@@ -1,0 +1,76 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* assignment_manager
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-26 15:34+0000\n"
+"PO-Revision-Date: 2023-10-26 15:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__assignment_date
+msgid "Assignment Date"
+msgstr "Fecha de Asignación"
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__name
+msgid "Assignment Name"
+msgstr "Nombre de Asignación"
+
+#. module: assignment_manager
+#: model:ir.ui.menu,name:assignment_manager.menu_assignment_manager
+msgid "Assignments"
+msgstr "Asignaciones"
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__user_id
+msgid "Assigned By"
+msgstr "Asignado Por"
+
+#. module: assignment_manager
+#: model:product.assignment,state:assignment_manager.field_product_assignment__state
+msgid "Assigned"
+msgstr "Asignado"
+
+#. module: assignment_manager
+#: view:product.assignment:assignment_manager.view_assignment_manager_form
+msgid "Assign"
+msgstr "Asignar"
+
+#. module: assignment_manager
+#: view:product.assignment:assignment_manager.view_assignment_manager_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: assignment_manager
+#: model:product.assignment,state:assignment_manager.field_product_assignment__state
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: assignment_manager
+#: view:product.assignment:assignment_manager.view_assignment_manager_form
+msgid "Mark as Done"
+msgstr "Marcar como Hecho"
+
+#. module: assignment_manager
+#: view:product.assignment:assignment_manager.view_assignment_manager_form
+msgid "Set to Draft"
+msgstr "Pasar a Borrador"
+
+#. module: assignment_manager
+#: model:product.assignment,state:assignment_manager.field_product_assignment__state
+msgid "Done"
+msgstr "Hecho"

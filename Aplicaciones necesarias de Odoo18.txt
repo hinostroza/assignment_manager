@@ -1,0 +1,14 @@
+Aplicaciones de Odoo18
+--------------------------------
+Actividades pendientes
+Calendario
+Compras
+Contactos
+Conversaciones
+Empleados
+Facturación
+Gastos
+Gestión de habilidades
+Inventario
+Proyecto
+Ventas

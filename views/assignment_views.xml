@@ -1,0 +1,79 @@
+<odoo>
+    <record id="view_assignment_manager_form" model="ir.ui.view">
+        <field name="name">assignment.manager.form</field>
+        <field name="model">product.assignment</field>
+        <field name="arch" type="xml">
+            <form string="Product Assignment">
+                <header>
+                    <button name="action_assign" string="Assign" type="object" class="oe_highlight" invisible="state != 'draft'"/>
+                    <button name="action_done" string="Mark as Done" type="object" class="oe_highlight" invisible="state != 'assigned'"/>
+                    <button name="action_cancel" string="Cancel" type="object" invisible="state not in ('draft', 'assigned')"/>
+                    <button name="action_draft" string="Set to Draft" type="object" invisible="state != 'cancel'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,assigned,done"/>
+                </header>
+                <sheet>
+                    <h1><field name="name"/></h1>
+                    <group>
+                        <group>
+                            <field name="product_id"/>
+                            <field name="contact_id"/>
+                            <field name="quantity"/>
+                            <field name="serial_number"/>
+                        </group>
+                        <group>
+                            <field name="assignment_date" readonly="1"/>
+                            <field name="state" readonly="1" force_save="1" widget="badge" decoration-success="state == 'done'" decoration-info="state == 'assigned'"/>
+                            <field name="user_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Notes">
+                            <field name="notes"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="view_assignment_manager_list" model="ir.ui.view">
+        <field name="name">assignment.manager.list</field>
+        <field name="model">product.assignment</field>
+        <field name="arch" type="xml">
+            <list string="Product Assignments">
+                <field name="name"/>
+                <field name="product_id"/>
+                <field name="contact_id"/>
+                <field name="quantity"/>
+                <field name="assignment_date"/>
+                <field name="state"/>
+                <field name="user_id"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Acciones -->
+    <record id="action_assignment_manager" model="ir.actions.act_window">
+        <field name="name">Product Assignments</field>
+        <field name="res_model">product.assignment</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first product assignment
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu item 
+    <record id="menu_assignment_manager" model="ir.ui.menu">
+        <field name="name">Product Assignments</field>
+        <field name="parent_id" ref="menu_inventory_root"/>
+        <field name="action" ref="action_assignment_manager"/>
+    </record>-->
+
+    <menuitem id="menu_assignment_manager_root" name="Product Assignments" sequence="10"/>
+    <menuitem id="menu_assignment_manager" name="Assignments" parent="menu_assignment_manager_root" action="action_assignment_manager" sequence="20"/>
+
+
+</odoo>

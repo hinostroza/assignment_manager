@@ -1,0 +1,186 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* assignment_manager
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20250918\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-01 04:52+0000\n"
+"PO-Revision-Date: 2025-10-01 04:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_form
+msgid "Assign"
+msgstr "Asignar"
+
+#. module: assignment_manager
+#: model:ir.model.fields.selection,name:assignment_manager.selection__product_assignment__state__assigned
+msgid "Assigned"
+msgstr "Asignado"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__user_id
+msgid "Assigned By"
+msgstr "Asignado Por"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__assignment_date
+msgid "Assignment Date"
+msgstr "Fecha de Asignación"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__name
+msgid "Assignment Name"
+msgstr "Nombre de Asignación"
+
+#. module: assignment_manager
+#: model:ir.ui.menu,name:assignment_manager.menu_assignment_manager
+msgid "Assignments"
+msgstr "Asignaciones"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: assignment_manager
+#: model:ir.model.fields.selection,name:assignment_manager.selection__product_assignment__state__cancel
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__contact_id
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: assignment_manager
+#: model_terms:ir.actions.act_window,help:assignment_manager.action_assignment_manager
+msgid "Create your first product assignment"
+msgstr "Crea tu primera asignación de producto"
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: assignment_manager
+#: model:ir.model.fields.selection,name:assignment_manager.selection__product_assignment__state__done
+msgid "Done"
+msgstr "Hecho"
+
+#. module: assignment_manager
+#: model:ir.model.fields.selection,name:assignment_manager.selection__product_assignment__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__id
+msgid "ID"
+msgstr ""
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_form
+msgid "Mark as Done"
+msgstr "Marcar como hecho"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+msgid "New"
+msgstr "Nuevo"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__notes
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_form
+msgid "Notes"
+msgstr "Notas"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: assignment_manager
+#: model:ir.model,name:assignment_manager.model_product_assignment
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_form
+msgid "Product Assignment"
+msgstr "Asignación de Producto"
+
+#. module: assignment_manager
+#: model:ir.actions.act_window,name:assignment_manager.action_assignment_manager
+#: model:ir.ui.menu,name:assignment_manager.menu_assignment_manager_root
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_list
+msgid "Product Assignments"
+msgstr "Asignaciones de Producto"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__quantity
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__serial_number
+msgid "Serial Number"
+msgstr "Número de Serie"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_form
+msgid "Set to Draft"
+msgstr "Marcar como Borrador"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__stock_move_id
+msgid "Stock Move"
+msgstr "Movimiento de Inventario"
