@@ -1,0 +1,119 @@
+<odoo>
+    <record id="view_assignment_manager_form" model="ir.ui.view">
+        <field name="name">assignment.manager.form</field>
+        <field name="model">product.assignment</field>
+        <field name="arch" type="xml">
+            <form string="Product Assignment">
+                <header>
+                    <button name="action_assign" string="Assign" type="object" class="oe_highlight" invisible="state != 'draft'"/>
+                    <button name="%(assignment_manager.action_report_product_assignment)d"
+                            string="Print Assignment"
+                            type="action"
+                            class="oe_highlight"
+                            invisible="state != 'done'"
+                    />
+                    <button name="action_done" string="Mark as Done" type="object" class="oe_highlight" invisible="state != 'assigned'"/>
+                    <button name="action_cancel" string="Cancel" type="object" invisible="state not in ('draft', 'assigned')"/>
+                    <button name="action_draft" string="Set to Draft" type="object" invisible="state != 'cancel'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,assigned,done,cancel"/>
+                </header>
+                <sheet>
+                    <h1><field name="name"/></h1>
+                    <group>
+                        <group>
+                            <field name="contact_id" domain="[('is_company', '=', False)]" readonly="state != 'draft'"/>
+                            <field name="user_id"/>
+                        </group>
+                        <group>
+                            <field name="assignment_date" readonly="1"/>
+                            <field name="state" force_save="1" widget="badge" decoration-success="state == 'done'" decoration-info="state == 'assigned'" decoration-warning="state == 'draft'" decoration-danger="state == 'cancel'"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="assignment_lines" string="Products">
+                            <!-- Usamos un encabezado para asegurar la traducción -->
+                            <h3 class="oe_read_only">Products</h3>
+                            <field name="assignment_line_ids" readonly="state != 'draft'">
+                                <list string="Product Lines" editable="bottom">
+                                    <field name="handle_separator" widget="handle"/>
+                                    <field name="product_id" domain="[('virtual_available', '>', 0)]"/>
+                                    <!-- <field name="product_tracking" invisible="1"/> -->
+                                    <field name="quantity"/>
+                                    <!-- <field name="serial_number"
+                                           invisible="product_tracking == 'none'"
+                                           required="product_tracking == 'serial'"/> -->
+                                    <field name="warranty_sn"/>
+                                    <field name="purchase_date"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page name="notes">
+                            <!-- Usamos un encabezado para asegurar la traducción -->
+                            <h3 class="oe_read_only">Notes</h3>
+                            <field name="notes"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="view_assignment_manager_list" model="ir.ui.view">
+        <field name="name">assignment.manager.list</field>
+        <field name="model">product.assignment</field>
+        <field name="arch" type="xml">
+            <list string="Product Assignments">
+                <field name="name" string="Code of Assignment"/>
+                <field name="contact_id"/>
+                <field name="assignment_date"/>
+                <field name="state"  force_save="1" widget="badge" decoration-success="state == 'done'" decoration-info="state == 'assigned'" decoration-warning="state == 'draft'" decoration-danger="state == 'cancel'"/>
+                <field name="user_id" optional="hide"/>
+                <!-- Podríamos agregar un campo calculado para mostrar los productos, pero por ahora lo mantenemos simple -->
+                <field name="notes" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_assignment_manager_search" model="ir.ui.view">
+        <field name="name">product.assignment.search</field>
+        <field name="model">product.assignment</field>
+        <field name="arch" type="xml">
+            <search string="Search Assignments">
+                <field name="contact_id" string="Contact"/>
+                <field name="name" string="Assignment Code"/>
+                <field name="user_id" string="Assigned By"/>
+                <separator/>
+                <filter name="my_assignments" string="My Assignments" domain="[('user_id', '=', uid)]" help="Show assignments created by me"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter name="group_by_contact" string="Contact" context="{'group_by': 'contact_id'}"/>
+                    <filter name="group_by_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_user" string="Assigned By" context="{'group_by': 'user_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acciones -->
+    <record id="action_assignment_manager" model="ir.actions.act_window">
+        <field name="name">Product Assignments</field>
+        <field name="res_model">product.assignment</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first product assignment
+            </p>
+        </field>
+        <field name="search_view_id" ref="view_assignment_manager_search"/>
+    </record>
+    
+    <!-- Opción 1: Menú de nivel superior (como lo tienes ahora) -->
+    <menuitem id="menu_assignment_manager_root" name="Product Assignments" sequence="100"/>
+    <!-- <menuitem id="menu_assignment_manager" name="Assignments" parent="menu_assignment_manager_root" action="action_assignment_manager" sequence="10"/> -->
+    
+    <!-- Opción 2: Menú dentro de Inventario (más estándar en Odoo) -->
+    <!-- Descomenta estas líneas y comenta las de arriba si prefieres esta opción -->
+    <menuitem id="menu_assignment_manager" name="Product Assignments" parent="stock.menu_stock_inventory_control" action="action_assignment_manager" sequence="99"/>
+
+</odoo>

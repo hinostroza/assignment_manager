@@ -1,0 +1,412 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* assignment_manager
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20250930\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-15 03:41+0000\n"
+"PO-Revision-Date: 2025-10-15 03:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: assignment_manager
+#: model:ir.actions.report,print_report_name:assignment_manager.action_report_product_assignment
+msgid "(object.name or 'Assignment').replace('/','_')"
+msgstr ""
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.report_product_assignment_template
+msgid "<strong>Assignment Date:</strong>"
+msgstr "<strong>Fecha de Asignación:</strong>"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.report_product_assignment_template
+msgid "<strong>Contact:</strong>"
+msgstr "<strong>Contacto:</strong>"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.report_product_assignment_template
+msgid "<strong>Notes:</strong>"
+msgstr "<strong>Notas:</strong>"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+msgid "A serial number is required for product %s."
+msgstr ""
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_form
+msgid "Assign"
+msgstr "Asignar"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields.selection,name:assignment_manager.selection__product_assignment__state__assigned
+msgid "Assigned"
+msgstr "Asignado"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__user_id
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_search
+msgid "Assigned By"
+msgstr "Asignado Por"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_search
+msgid "Assignment Code"
+msgstr "Código"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__assignment_date
+msgid "Assignment Date"
+msgstr "Fecha de Asignación"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__assignment_line_ids
+msgid "Assignment Lines"
+msgstr "Líneas de Asignación"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment_line__assignment_id
+msgid "Assignment Reference"
+msgstr "Referencia de Asignación"
+
+#. module: assignment_manager
+#: model:ir.actions.report,name:assignment_manager.action_report_product_assignment
+msgid "Assignment Slip"
+msgstr "Hoja de Asignación"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.report_product_assignment_template
+msgid "Assignment:"
+msgstr ""
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+msgid "Assignment: %s"
+msgstr "Asignación: %s"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields.selection,name:assignment_manager.selection__product_assignment__state__cancel
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__name
+msgid "Code"
+msgstr "Código"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_list
+msgid "Code of Assignment"
+msgstr "Código de Asignación"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__contact_id
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_search
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: assignment_manager
+#: model_terms:ir.actions.act_window,help:assignment_manager.action_assignment_manager
+msgid "Create your first product assignment"
+msgstr "Crea tu primera asignación de producto"
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__create_uid
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment_line__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__create_date
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment_line__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__display_name
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment_line__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields.selection,name:assignment_manager.selection__product_assignment__state__done
+msgid "Done"
+msgstr "Hecho"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields.selection,name:assignment_manager.selection__product_assignment__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: assignment_manager
+#: model:ir.model.fields,help:assignment_manager.field_product_assignment_line__product_tracking
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr ""
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+msgid ""
+"For product %s (tracked by unique serial number), the quantity must be 1."
+msgstr "Para el producto %s (seguido por número de serie único), la cantidad debe ser 1."
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__id
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__write_uid
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment_line__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__write_date
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment_line__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment_line__serial_number
+msgid "Lot/Serial Number (Inventory)"
+msgstr "Lote/Número de Serie (Inventario)"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_form
+msgid "Mark as Done"
+msgstr "Marcar como hecho"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_search
+msgid "My Assignments"
+msgstr "Mis Asignaciones"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+msgid "New"
+msgstr "Nuevo"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+msgid "No warehouse found for the company %s."
+msgstr "No se encontró un almacén para la compañía %s."
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+msgid "Not enough stock for product \"%s\". Available: %s, Requested: %s."
+msgstr "No hay suficiente stock para el producto \"%s\". Disponible: %s, Solicitado: %s."
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__notes
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_form
+msgid "Notes"
+msgstr "Notas"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+msgid "Only assignments in the \"Assigned\" state can be marked as \"Done\"."
+msgstr ""
+"Solo se pueden marcar como \"Hechas\" las asignaciones en estado "
+"\"Asignado\"."
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_form
+msgid "Print Assignment"
+msgstr "Imprimir Asignación"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment_line__product_id
+#: model_terms:ir.ui.view,arch_db:assignment_manager.report_product_assignment_template
+msgid "Product"
+msgstr "Producto"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+msgid "Product \"%s\" requires a Lot/Serial number."
+msgstr "El producto \"%s\" requiere un número de Lote/Serie."
+
+#. module: assignment_manager
+#: model:ir.model,name:assignment_manager.model_product_assignment
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_form
+msgid "Product Assignment"
+msgstr "Asignación de Producto"
+
+#. module: assignment_manager
+#: model:ir.model,name:assignment_manager.model_product_assignment_line
+msgid "Product Assignment Line"
+msgstr "Línea de Asignación de Producto"
+
+#. module: assignment_manager
+#: model:ir.actions.act_window,name:assignment_manager.action_assignment_manager
+#: model:ir.ui.menu,name:assignment_manager.menu_assignment_manager
+#: model:ir.ui.menu,name:assignment_manager.menu_assignment_manager_root
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_list
+msgid "Product Assignments"
+msgstr "Asignaciones de Producto"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_form
+msgid "Product Lines"
+msgstr "Líneas de Producto"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_form
+msgid "Products"
+msgstr "Productos"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment_line__purchase_date
+#: model_terms:ir.ui.view,arch_db:assignment_manager.report_product_assignment_template
+msgid "Purchase Date"
+msgstr "Fecha de Compra"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment_line__quantity
+#: model_terms:ir.ui.view,arch_db:assignment_manager.report_product_assignment_template
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.report_product_assignment_template
+msgid "Received by:"
+msgstr "Recibido por:"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.report_product_assignment_template
+msgid "SN (Warranty)"
+msgstr "SN (Garantía)"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment_line__warranty_sn
+msgid "SN (Warranty/Informational)"
+msgstr "SN (Garantía/Informativo)"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_search
+msgid "Search Assignments"
+msgstr "Buscar Asignaciones"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+msgid "Serial Number \"%s\" not found for product \"%s\"."
+msgstr "Número de Serie \"%s\" no encontrado para el producto \"%s\"."
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_form
+msgid "Set to Draft"
+msgstr "Marcar como Borrador"
+
+#. module: assignment_manager
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_search
+msgid "Show assignments created by me"
+msgstr "Mostrar Asignaciones creadas por mí"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__state
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment_line__state
+#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_search
+msgid "Status"
+msgstr "Estado"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__stock_move_ids
+msgid "Stock Moves"
+msgstr "Movimientos de Stock"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+msgid "The customer location could not be found. Please configure it."
+msgstr "No se pudo encontrar la ubicación del cliente. Por favor, configúrela."
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+msgid "The quantity must be greater than 0 for product %s."
+msgstr "La cantidad debe ser mayor que 0 para el producto %s."
+
+#. module: assignment_manager
+#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment_line__product_tracking
+msgid "Tracking"
+msgstr "Seguimiento"
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+msgid "You cannot delete an assignment that is in the 'Done' state."
+msgstr "No puedes eliminar una asignación que está en estado 'Hecho'."
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+msgid "You cannot mark as done an assignment with no product lines."
+msgstr "No puedes marcar como hecha una asignación sin líneas de producto."
+
+#. module: assignment_manager
+#. odoo-python
+#: code:addons/assignment_manager/models/assignment.py:0
+msgid "You must add at least one product line."
+msgstr "Debes añadir al menos una línea de producto."

@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+        <record id="action_report_product_assignment" model="ir.actions.report">
+            <field name="name">Assignment Slip</field>
+            <field name="model">product.assignment</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">assignment_manager.report_product_assignment_template</field>
+            <field name="report_file">assignment_manager.report_product_assignment_template</field>
+            <field name="print_report_name">(object.name or 'Assignment').replace('/','_')</field>
+            <field name="binding_model_id" eval="False"/> <!-- Lo desactivamos para controlarlo con un botón -->
+        </record>
+    </data>
+</odoo>

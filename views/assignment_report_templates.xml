@@ -1,0 +1,70 @@
+<odoo>
+    <data>
+        <template id="report_product_assignment_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2>Assignment: <span t-field="doc.name"/></h2>
+                                </div>
+                                <!-- <div class="col-5 text-end">
+                                    <t t-set="base_url" t-value="request.env['ir.config_parameter'].sudo().get_param('web.base.url')"/>
+                                    <img t-if="base_url" t-att-src="'%s/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % (base_url, 'Code128', doc.name, 600, 100)"
+                                         style="width:100%; height:40px;"
+                                         alt="Barcode"
+                                    />
+                                </div> -->
+                            </div>
+
+                            <div class="row mt32 mb32">
+                                <div class="col-6">
+                                    <strong>Contact:</strong>
+                                    <p t-field="doc.contact_id.name"/>
+                                </div>
+                                <div class="col-6">
+                                    <strong>Assignment Date:</strong>
+                                    <p t-field="doc.assignment_date"/>
+                                </div>
+                            </div>
+
+                            <table class="table table-sm o_main_table">
+                                <thead>
+                                    <tr>
+                                        <th name="th_product" class="text-left">Product</th>
+                                        <th name="th_quantity" class="text-right">Quantity</th>
+                                        <th name="th_sn" class="text-left">SN (Warranty)</th>
+                                        <th name="th_purchase_date" class="text-left">Purchase Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="doc.assignment_line_ids" t-as="line">
+                                        <tr>
+                                            <td><span t-field="line.product_id.display_name"/></td>
+                                            <td class="text-right"><span t-field="line.quantity"/></td>
+                                            <td><span t-field="line.warranty_sn"/></td>
+                                            <td><span t-field="line.purchase_date"/></td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+
+                            <div t-if="doc.notes" class="mt32">
+                                <strong>Notes:</strong>
+                                <p t-field="doc.notes"/>
+                            </div>
+
+                            <div class="row" style="margin-top: 128px;">
+                                <div class="col-6 offset-3 text-center">
+                                    <p style="border-top: 1px solid black;"/>
+                                    <p class="mt-2">Received by: <strong><span t-field="doc.contact_id.name"/></strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

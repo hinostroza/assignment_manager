@@ -1,0 +1,11 @@
+<odoo>
+    <data noupdate="1">
+        <record id="seq_stock_product_assignment" model="ir.sequence">
+            <field name="name">Product Assignment Sequence</field>
+            <field name="code">stock.product.assignment</field>
+            <field name="prefix">ASIGN</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>
