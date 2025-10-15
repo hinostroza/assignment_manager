@@ -1,11 +1,11 @@
-Agregar Empresa (Transglobal)
+Agregar Empresa (Empres s.a.c.)
 Configurar moneda de Empresa
 Configurar logo
 Configurar idioma
 Configurar pagina web
 
-Duplicar usuario Administrador y poner el nombre de (chinostroza)
-Agregar Usuario(s) (chinostroza@transglobal.pendientes)
+Duplicar usuario Administrador 
+Agregar Usuario(s)
 Configurar contraseña
 
 Aplicaciones de Odoo18
