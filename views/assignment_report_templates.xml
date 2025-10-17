@@ -9,23 +9,13 @@
                                 <div class="col-7">
                                     <h2>Assignment: <span t-field="doc.name"/></h2>
                                 </div>
-                                <!-- <div class="col-5 text-end">
-                                    <t t-set="base_url" t-value="request.env['ir.config_parameter'].sudo().get_param('web.base.url')"/>
-                                    <img t-if="base_url" t-att-src="'%s/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % (base_url, 'Code128', doc.name, 600, 100)"
-                                         style="width:100%; height:40px;"
-                                         alt="Barcode"
-                                    />
-                                </div> -->
                             </div>
 
                             <div class="row mt32 mb32">
-                                <div class="col-6">
-                                    <strong>Contact:</strong>
-                                    <p t-field="doc.contact_id.name"/>
-                                </div>
-                                <div class="col-6">
-                                    <strong>Assignment Date:</strong>
-                                    <p t-field="doc.assignment_date"/>
+                                <div class="col-12">
+                                    <p><strong style="color: #278794;">Contact:</strong> <span t-field="doc.contact_id.name"/></p>
+                                    <p><strong style="color: #278794;">Assignment Date:</strong> <span t-field="doc.assignment_date"/></p>
+                                    <p><strong style="color: #278794;">Assigned By:</strong> <span t-field="doc.user_id.name"/></p>
                                 </div>
                             </div>
 

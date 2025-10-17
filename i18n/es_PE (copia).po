@@ -27,11 +27,6 @@ msgstr "<strong>Fecha de Asignación:</strong>"
 
 #. module: assignment_manager
 #: model_terms:ir.ui.view,arch_db:assignment_manager.report_product_assignment_template
-msgid "<strong>Assigned By:</strong>"
-msgstr "<strong>Asignado Por:</strong>"
-
-#. module: assignment_manager
-#: model_terms:ir.ui.view,arch_db:assignment_manager.report_product_assignment_template
 msgid "<strong>Contact:</strong>"
 msgstr "<strong>Contacto:</strong>"
 
@@ -98,15 +93,9 @@ msgid "Assignment Slip"
 msgstr "Hoja de Asignación"
 
 #. module: assignment_manager
-#: model:ir.model.fields,field_description:assignment_manager.field_product_assignment__attachment_ids
-#: model_terms:ir.ui.view,arch_db:assignment_manager.view_assignment_manager_form
-msgid "Attachments"
-msgstr "Adjuntos"
-
-#. module: assignment_manager
 #: model_terms:ir.ui.view,arch_db:assignment_manager.report_product_assignment_template
 msgid "Assignment:"
-msgstr "Asignación:"
+msgstr ""
 
 #. module: assignment_manager
 #. odoo-python

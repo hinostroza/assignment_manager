@@ -4,7 +4,6 @@ from odoo.exceptions import UserError, ValidationError
 class ProductAssignment(models.Model):
     _name = 'product.assignment'
     _description = 'Product Assignment'
-    # _order = 'deadline asc'
     
     name = fields.Char(string=_('Code'), required=True, copy=False, readonly=True, default='New')
     contact_id = fields.Many2one('res.partner', string=_('Contact'), required=True)
@@ -24,6 +23,9 @@ class ProductAssignment(models.Model):
     
     notes = fields.Text(string=_('Notes'))
     user_id = fields.Many2one('res.users', string=_('Assigned By'), default=lambda self: self.env.user, readonly=True)
+
+    # Campo para múltiples adjuntos
+    attachment_ids = fields.Many2many('ir.attachment', string='Attachments', copy=False)
 
     @api.constrains('assignment_line_ids')
     def _check_lines(self):

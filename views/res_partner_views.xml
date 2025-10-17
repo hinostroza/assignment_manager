@@ -1,0 +1,70 @@
+<odoo>
+    <data>
+        <record id="res_partner_view_form_inherit_assignment" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit.assignment</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button class="oe_stat_button" type="object" name="action_view_assignments" icon="fa-book">
+                        <field string="Assignments" name="assignment_count" widget="statinfo"/>
+                    </button>
+                </xpath>
+
+                <!-- Ejemplo para ocultar el botón de Reuniones (Meetings) -->
+                <!-- <xpath expr="//button[contains(@name, 'action_calendar_event')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath> -->
+
+                <!-- Ocultar botones de Ventas, Facturado y Tasa de Entrega -->
+                <xpath expr="//button[@name='action_view_sale_order'] | //button[@name='action_view_partner_invoices'] | //button[.//field[@name='on_time_rate']]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+            </field>
+        </record>
+
+        <!-- MÉTODO DEFINITIVO: Sobrescribir la vista con mayor prioridad -->
+        <!-- Dado que la vista kanban de contactos no es heredable de forma estándar,
+             la solución más robusta es redefinirla con una prioridad mayor.
+             Esto hace que Odoo use nuestra versión en lugar de la original. -->
+        <record id="res_partner_view_kanban_inherit_assignment" model="ir.ui.view">
+            <field name="name">res.partner.kanban.inherit.assignment</field>
+            <field name="model">res.partner</field>
+            <field name="mode">primary</field>
+            <field name="priority">99</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_mobile">
+                    <field name="id"/>
+                    <field name="display_name"/>
+                    <field name="is_company"/>
+                    <field name="function"/>
+                    <field name="street"/>
+                    <field name="zip"/>
+                    <field name="city"/>
+                    <field name="state_id"/>
+                    <field name="country_id"/>
+                    <field name="image_128"/>
+                    <field name="assignment_count"/> <!-- Añadimos el campo para que esté disponible -->
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="o_kanban_image">
+                                    <img t-att-src="kanban_image('res.partner', 'image_128', record.id.raw_value)" alt="Partner" class="o_image_64_contain"/>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <strong class="o_kanban_record_title"><field name="display_name"/></strong>
+                                    <!-- NUESTRO CÓDIGO AÑADIDO -->
+                                    <div t-if="record.assignment_count.raw_value > 0" class="mt-2">
+                                        <a name="action_view_assignments" type="object"><i class="fa fa-book me-1" role="img" aria-label="Assignments"/> <t t-esc="record.assignment_count.value"/> Assignments</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+    </data>
+</odoo>

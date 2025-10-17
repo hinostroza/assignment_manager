@@ -53,6 +53,8 @@
                             <field name="notes"/>
                         </page>
                     </notebook>
+                    <h3 class="mt16">Attachments</h3>
+                    <field name="attachment_ids" widget="many2many_binary"/>
                 </sheet>
             </form>
         </field>
@@ -66,7 +68,7 @@
             <list string="Product Assignments">
                 <field name="name" string="Code of Assignment"/>
                 <field name="contact_id"/>
-                <field name="assignment_date"/>
+                <field name="assignment_date" width="'150px'"/>
                 <field name="state"  force_save="1" widget="badge" decoration-success="state == 'done'" decoration-info="state == 'assigned'" decoration-warning="state == 'draft'" decoration-danger="state == 'cancel'"/>
                 <field name="user_id" optional="hide"/>
                 <!-- Podríamos agregar un campo calculado para mostrar los productos, pero por ahora lo mantenemos simple -->
